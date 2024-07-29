@@ -4,7 +4,6 @@
 #include <stdlib.h>
 #define tam 9
 
-// Função que verifica se todas as colunas possuem números de 1 a 9
 int Colunas(int matriz[tam][tam], int coluna) 
 {
   int numeros[tam];
@@ -42,7 +41,7 @@ int Linhas(int matriz[tam][tam], int linha)
   }
   return 1;
 }
-// Função que verifica os quadrados 3x3 da matriz
+
 int Matriz3x3 (int matriz[tam][tam], int InLinha, int InColuna) 
 {
   int numeros[tam];
@@ -66,10 +65,10 @@ int Matriz3x3 (int matriz[tam][tam], int InLinha, int InColuna)
 }
 int main() 
 {
-  //Entrada que informa quantas instâncias (matrizes)
+
   int instancias = 0;
   scanf("%d", &instancias);
-  // Entrada das matrizes
+
   for (int i = 0; i < instancias; i++)
   {
     int matriz[tam][tam];
