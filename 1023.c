@@ -3,22 +3,21 @@
 
 #include <stdio.h>
 
-#define MAX_CONSUMO 200
 
 int main()
 {
     int T = 0;
     long long N, X, Y;
     long long totalX, totalY;
-    int consumos[MAX_CONSUMO + 1];
+    int consumos[201];
 
     while (1)
     {
         scanf("%lld", &N); 
         if (N == 0) break;
-        for (int i = 0; i <= MAX_CONSUMO; ++i) {
+        for (int i = 0; i <= 200; ++i) {
             consumos[i] = 0;
-            
+
         totalX = 0;
         totalY = 0;
         }
@@ -30,14 +29,14 @@ int main()
             totalX += X;
             totalY += Y;
 
-            if (X > 0 && Y / (double)X <= MAX_CONSUMO) { 
+            if (X > 0 && Y / (double)X <= 200) { 
                 consumos[Y / X] += X;
             }
         }
 
         printf("Cidade# %d:\n", ++T);
         int primeiro = 1;
-        for (int i = 0; i <= MAX_CONSUMO; ++i)
+        for (int i = 0; i <= 200; ++i)
         {
             if (consumos[i] > 0)
             {
